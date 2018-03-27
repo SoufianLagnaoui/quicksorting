@@ -1,12 +1,9 @@
 #quick sort implementation
-array = []
-def quick_sort(array):
-    less = []
-    equal = []
-    greater = []
-    if (len(array) > 1):
-        pivot = array[0]
-        for element in array:
+def quick_sort(list = []):
+    less = equal = greater = []
+    if (len(list) > 1):
+        pivot = list[0]
+        for element in list:
             if pivot < element:
                 greater.append(element)
             if pivot > element:
@@ -17,10 +14,6 @@ def quick_sort(array):
     else:
         return array
 def main():
-    array = [8, 8, 11, 3, 2, 0] #put here your list to sort
-    quick_sort(array)
-    print quick_sort(array)
-    
-
+    print quick_sort([8, 8, 11, 3, 2, 0])
 if __name__ == '__main__':
     main()
